@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/vandors/bootstrap.min.css">
+  <!-- Fontawsome -->
+  <link rel="stylesheet" href="css/vandors/all.min.css">
+  <!-- Mian-Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Index</title>
+</head>
+
+<body>
+
+  <!-- ================================================
+    Start Header  -->
+  <header class="header">
+    <!-- Start Navbar -->
+    <ul class="nav-bar  bg-main-color p-3">
+      <li class="mt-3 text-center">
+        <a href="#" data-targets="#control" class="link-navbar  colorWhait">
+          <i class="fas fa-user-plus  icon-nav mainColor  font-size d-block mx-auto"></i>
+          Control
+        </a>
+      </li>
+      <li class="mt-3 text-center">
+        <a href="#" data-targets="#ps" class="link-navbar  colorWhait">
+          <i class="fas fa-tv  icon-nav mainColor font-size d-block mx-auto"></i>
+          PS4
+        </a>
+      </li>
+      <li class="mt-3 text-center">
+        <a href="#" data-targets="#shift" class="link-navbar  colorWhait">
+          <i class="fa fa-door-open  icon-nav mainColor  font-size d-block mx-auto"></i>
+          End Shift
+        </a>
+      </li>
+    </ul>
+    <!-- End Navbar -->
+
+  </header>
+  <!-- ================================================
+    End Header  -->
+
+  <!-- ================================================
+  Start App -->
+  <section class="app">
+    <!-- Start Pages -->
+    <div class="container-fluid">
+      <!-- ================================================
+        Start control-page -->
+      <section id="control" class="control-page py-5  block ">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="title-page mb-5">
+              Control
+            </h2>
+          </div><!-- ./title-page -->
+
+          <div class="contet-control p-5 d-flex justify-content-center  align-items-center">
+            <button class="box-contnet mr-5 click-pull add-ps">
+              <span class="mainColor font-size title-icon">Add PS</span>
+              <i class="fas fa-tv font-size icon text-center ml-3"></i>
+            </button>
+            <button class="box-contnet click-pull add-drink">
+              <span class="mainColor font-size title-icon">Add Drink</span>
+              <i class="fas fa-beer font-size icon text-center ml-3"></i>
+            </button>
+          </div> <!-- ./contnet -->
+
+          <!-- ================================================
+                Start Add Drink-Page -->
+          <section class="add-drink-page py-5 ">
+            <div class="container">
+              <div class="text-center">
+                <h2 class="title-page mb-5">
+                  Add Drink
+                </h2>
+              </div> <!-- title-page -->
+              <form class="text-center w-100 mx-auto">
+                <input class="w-50  mb-3 p-2" type="text" placeholder="Name Drink">
+                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Price">
+                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Quantity">
+                <button class="w-25 d-block mx-auto  btn bg-color-add colorWhait">
+                  Add
+                  <i class="fa fa-plus"></i>
+                </button>
+              </form>
+              <!-- End-Form -->
+
+              <!-- Main Table -->
+              <table class="table table-dark table-hover  mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Drinks Name</th>
+                    <th scope="col">Drinks Price</th>
+                    <th scope="col">Drinks Count</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <i class="fas fa-edit click-pull color-add font-size "></i>
+                      <i class="fa fa-trash click-pull color-remove font-size mx-1"></i>
+                    </th>
+                    <td>test</td>
+                    <td>22</td>
+                    <td>2</td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <!-- End Main Table -->
+            </div>
+          </section>
+          <!-- ================================================
+          End Add Drink-Page -->
+
+          <!-- ================================================
+                Start Add PS-Page -->
+          <section class="add-ps-page py-5 ">
+            <div class="container">
+              <div class="text-center">
+                <h2 class="title-page mb-5">
+                  Add PS
+                </h2>
+              </div> <!-- title-page -->
+              <form class="text-center w-100 mx-auto">
+                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Number PS">
+                <input class="w-50  mb-3 p-2" type="text" placeholder="Name PS">
+                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Price Single Hour">
+                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Price Multi Hour">
+                <button class="w-25 d-block mx-auto  btn bg-color-add colorWhait">
+                  Add
+                  <i class="fa fa-plus"></i>
+                </button>
+              </form>
+              <!-- End-Form -->
+
+              <!-- Main Table -->
+              <table class="table table-dark table-hover  mt-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Edit</th>
+                    <th scope="col">PS Number</th>
+                    <th scope="col">PS Name</th>
+                    <th scope="col">Price Single Hour</th>
+                    <th scope="col">Price Single Hour</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <i class="fas fa-edit click-pull color-add font-size "></i>
+                      <i class="fa fa-trash click-pull color-remove font-size mx-1"></i>
+                    </th>
+                    <td>1</td>
+                    <td>test</td>
+                    <td>2</td>
+                    <td>4</td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <!-- End Main Table -->
+            </div>
+          </section>
+          <!-- ================================================
+            End Add PS-Page -->
+
+        </div> <!-- ./continer -->
+      </section>
+      <!-- ================================================
+          End control-page -->
+
+      <!-- ================================================
+        Start Playstation-page -->
+      <section id="ps" class="ps-page py-5  ">
+        <div class="text-center">
+          <h2 class="title-page  mb-5">
+            Playstation devices
+          </h2> <!-- ./title -->
+        </div>
+        <div class="container">
+          <div class="row">
+            <!-- Start Card PS -->
+            <div class="col-lg-4 mb-4">
+              <div class="card px-4 py-5">
+                <h5 class="card-title text-center">PS4 Number 1</h5>
+                <img class="card-img-top w-100 " height="150px" src="images/ps4/2.png" alt="Card image cap">
+                <!-- Start Timer -->
+                <div class="clock">
+                  <div class="row">
+                    <div class="col-md-12 input-wrapper">
+                      <div class="input">
+                        <input type="number" id="num" class="form-control w-100" min="0" placeholder="Minutes">
+                        <select id="measure" class="form-control" hidden>
+                          <option value="m" selected>Minutes</option>
+                        </select>
+                      </div>
+                      <div class="buttons-wrapper mt-4 d-flex">
+                        <button class="btn w-50" id="start-cronometer"><i class="fas fa-infinity"></i></button>
+                        <button class="btn w-50 ml-3" id="start-countdown">
+                          <i class="fas fa-hourglass-start"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- ./Start Timer -->
+
+                    <div id="timer" class="col-12">
+                      <div class="clock-wrapper font-size">
+                        <span class="hours">00</span>
+                        <span class="dots">:</span>
+                        <span class="minutes">00</span>
+                        <span class="dots">:</span>
+                        <span class="seconds">00</span>
+                      </div>
+                    </div>
+                    <!-- Show Timer -->
+
+                    <div class="buttons-wrapper">
+                      <button class="btn bg-color-remove w-50" id="stop-timer">
+                        <i class="fa fa-stop"></i>
+                      </button>
+
+                      <div class="d-flex">
+                        <button class="btn bg-color-add w-50" id="add-drink">
+                          <i class="fa fa-plus" aria-hidden="true"></i>
+                          <i class="fa fa-beer" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn w-50" id="details">
+                          details
+                        </button>
+                        <button class="btn w-50 bg-color-add" id="reset-timer">
+                          <i class="fas fa-redo-alt    "></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Action Timer -->
+
+                  </div>
+                </div> <!-- ./Timer -->
+              </div> <!-- ./card -->
+            </div> <!-- ./col-lg-4 -->
+
+          </div> <!-- ./row -->
+        </div> <!-- ./container -->
+      </section>
+      <!-- ================================================
+          End Playstation-page -->
+
+      <!-- ================================================
+        Start Shift-page -->
+      <section id="shift" class="end-shift-page py-5 ">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="title-page mb-5">
+              End Shift
+            </h2> <!-- ./title-page -->
+          </div>
+          <form>
+            <div class="d-flex justify-content-center">
+              <input class="w-25 p-2 mr-2" type="text" placeholder="Total Shift" disabled readonly>
+              <button class="btn bg-color-remove colorWhait px-4">
+                <i class="fas fa-sign-out-alt    "></i>
+                End
+              </button>
+            </div>
+            <div class="text-center">
+              <label class="colorWhait font-size mr-2" for="form">From</label>
+              <input id="from" class="w-25 mt-3 p-2" type="date">
+              <label class="colorWhait font-size mx-2" for="to">To</label>
+              <input id="to" class="w-25 mt-3 p-2" type="date">
+            </div>
+          </form>
+          <!-- Main Table -->
+          <table class="table table-dark table-hover  mt-5">
+            <thead>
+              <tr>
+                <th scope="col">PS Name</th>
+                <th scope="col">Cash Date </th>
+                <th scope="col">Total Cash </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">test</th>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- End Main Table -->
+        </div>
+      </section>
+      <!-- ================================================
+          End Shift-page -->
+
+
+      <!-- =================================================
+    Start Popup -->
+
+      <!-- Popup Drink  -->
+      <section class="parent-popup-drink ">
+        <div class="popup-content-drink py-4 px-3">
+          <i class="fa fa-times click-pull p-2 color-remove font-size icon-closed"></i>
+          <div class="text-center">
+            <h2> Add Drink </h2>
+          </div>
+          <form class="text-center mt-5">
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Name PS" readonly disabled>
+            <select class="w-75 mb-3 border p-2">
+              <optgroup label="Drinks">Drinks</optgroup>
+              <option value="">Test</option>
+              <option value="">Test</option>
+              <option value="">Test</option>
+            </select>
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Price" readonly disabled>
+            <select class="w-75 mb-3 border p-2">
+              <optgroup label="Quantity">Quantity</optgroup>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <button class="btn border w-50 bg-color-add colorWhait">Add</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Popup Details  -->
+
+      <section class="parent-popup-details ">
+        <div class="popup-content-details py-4 px-3">
+          <i class="fa fa-times click-pull p-2 color-remove font-size icon-closed"></i>
+          <div class="text-center">
+            <h2 class="title-page"> Account </h2>
+          </div>
+          <form class="text-center mt-5">
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Number PS" readonly disabled>
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Time PS" readonly disabled>
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Price" readonly disabled>
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Price Dirnk" readonly disabled>
+            <input class="w-75 mb-3 border p-2" type="text" placeholder="Total" readonly disabled>
+          </form>
+        </div>
+      </section>
+      <!-- =====================================================
+    End Popup -->
+
+    </div> <!-- ./contaner -->
+  </section>
+  <!-- ================================================
+  End App -->
+
+  <!-- ================================================
+    Start Main Footer -->
+  <footer class=" py-3 footer bg-main-color colorWhait bottom">
+    <div class="text-center">
+      <span class="copy-right font-size">Copy Right &copy; 2020 Pnetworkers</span>
+    </div>
+  </footer>
+  <!-- ================================================
+      End Main Footer -->
+
+  <!-- Laibiry-Jquery -->
+  <script src="js/vandors/jquery.js"></script>
+  <!-- Bootstarp -->
+  <script src="js/vandors/bootstrap.min.js"></script>
+  <!-- Timer-Libiry -->
+  <script src="js/vandors/script.js"></script>
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+/* 
+    1-Main Style
+        1.1-Main Table Style
+        1.2-Main Table
+    2-Main Header
+    3-Logins Page
+    4-PS4 Page
+        4.1-Form Add Time
+        4.2-Show Timer
+        4.3-Aletr Timer Finshed
+    5-Details Page
+    6-Drink Page
+    7-End Shift
+    8-Add Page
+        8.1-Add PS
+        8.2-Add Drink
+
+*/
+
+/*=========================
+1-Start Main Style */
+:root {
+    --mainColor: #a11827;
+    --black: #0f0b0b;
+    --whait: #ffffff;
+    --gray: #bdc3c7;
+}
+
+body {
+    background-color: #f1f1f1;
+    text-transform: capitalize;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+        url("../images/bg/bg-ps.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+input:focus,
+textarea {
+    outline: var(--mainColor);
+}
+
+select {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.mainColor {
+    color: var(--mainColor);
+}
+
+.colorWhait {
+    color: var(--whait);
+}
+
+.bg-main-color {
+    background: var(--mainColor);
+}
+
+.font-size {
+    font-size: 1.3em;
+}
+
+.click-pull {
+    cursor: pointer;
+}
+
+.btn-min:hover {
+    color: var(--mainColor);
+    background-color: transparent;
+}
+
+.bg-color-add {
+    background-color: #26a65b;
+    border: 1px solid #26a65b;
+}
+.color-add {
+    color: #26a65b;
+}
+
+.bg-color-add:hover {
+    color: #26a65b !important;
+    background-color: var(--whait);
+}
+.bg-color-remove {
+    background-color: #f00;
+    border: 1px solid #f00;
+}
+
+.bg-color-remove:hover {
+    color: #f00 !important;
+    background-color: var(--whait);
+}
+
+.color-remove {
+    color: #f00;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.title-page {
+    position: relative;
+    display: inline-block;
+    color: var(--whait);
+}
+
+.title-page::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
+    border-radius: 100%;
+    background-color: var(--whait);
+}
+.title-page::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -17px;
+    border-radius: 10px;
+    background: var(--mainColor);
+}
+/* Show Sections */
+#ps,
+#shift {
+    display: none;
+}
+.block {
+    display: block;
+}
+/* Popup */
+.parent-popup-drink,
+.parent-popup-details {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.parent-popup-drink .popup-content-drink,
+.parent-popup-details .popup-content-details {
+    position: fixed;
+    margin: 0 auto;
+    background-color: var(--whait);
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: transform 0.8s;
+}
+.parent-popup-drink .popup-content-drink .title-page,
+.parent-popup-details .popup-content-details .title-page {
+    color: var(--mainColor);
+}
+.parent-popup-drink .popup-content-drink .icon-closed,
+.parent-popup-details .popup-content-details .icon-closed {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/*=========================
+1-End Main Style */
+/* =====================
+2-Start Main Navbar */
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 20px 1px var(--black);
+    z-index: 2;
+    background-color: var(--black);
+}
+
+.nav-bar .link-navbar:hover {
+    color: var(--whait);
+}
+.nav-bar .link-navbar:hover .icon-nav {
+    background-color: var(--mainColor);
+    color: var(--whait);
+}
+
+.nav-bar .icon-nav {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--whait);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* =====================
+2-End Main Navbar */
+
+/* =====================
+3-Start  Control page */
+
+/* =====================
+3-End  Control page */
+.control-page .contet-control {
+    background-color: #f1f1f1;
+    box-shadow: 1px 1px 10px 4px var(--black);
+    border-radius: 4px;
+}
+.control-page .contet-control .box-contnet {
+    position: relative;
+    border: none;
+    outline: none;
+}
+.control-page .contet-control .box-contnet .icon {
+    color: var(--whait);
+    background-color: var(--mainColor);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+    transition: color 0.4s, background-color 0.4s;
+}
+.control-page .contet-control .box-contnet:hover .icon {
+    color: var(--mainColor);
+    background-color: var(--whait);
+}
+.control-page .contet-control .box-contnet .title-icon::before {
+    content: "+";
+    position: absolute;
+    color: var(--whait);
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 15px;
+    text-align: center;
+    right: 0;
+    font-weight: bold;
+}
+.control-page .add-drink-page,
+.control-page .add-ps-page {
+    display: none;
+}
+/* ==================
+3-Start Logins Page*/
+
+/* ================== 
+4-Start PS4 Page
+        4.1-Form Add Time
+        4.2-Show Timer
+        4.3-Aletr Timer Finshed  */
+.ps-page .card {
+    transition: box-shadow 0.4s;
+}
+.ps-page .card:hover {
+    box-shadow: 1px 1px 5px 1px var(--black);
+}
+
+/* Timer */
+.ps-page button:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.05);
+}
+
+.ps-page .clock .input-wrapper .input input:focus,
+.ps-page .clock .input-wrapper .input input:active,
+.ps-page .clock .input-wrapper button:focus,
+.ps-page .clock .input-wrapper button:active {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--mainColor);
+}
+
+.ps-page .clock .buttons-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ps-page .clock .input-wrapper button {
+    background-color: var(--mainColor);
+    font-weight: bold;
+    color: var(--whait);
+    border: 1px solid;
+}
+
+.ps-page .clock .input-wrapper button:hover {
+    background-color: var(--whait);
+    color: var(--mainColor);
+}
+
+.ps-page .clock #timer {
+    display: none;
+}
+
+.ps-page .clock #timer .clock-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.ps-page .clock #timer .clock-wrapper span {
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.ps-page .clock #timer .clock-wrapper span.red {
+    transition: all 0.2s ease;
+    color: rgb(233, 19, 19);
+    font-size: 1.3em;
+}
+
+.ps-page .clock #timer .clock-wrapper span.red.hours,
+.ps-page .clock #timer .clock-wrapper span.red.minutes,
+.ps-page .clock #timer .clock-wrapper span.red.dots {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.ps-page .clock #timer .clock-wrapper span.dots {
+    margin: -2px 5px 0;
+}
+
+.ps-page .clock button#stop-timer,
+.ps-page .clock button#add-drink,
+.ps-page .clock button#details,
+.ps-page .clock button#reset-timer {
+    margin: 5px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: none;
+    color: #fff;
+}
+
+.ps-page .clock button#details {
+    background-color: var(--black);
+    border: 1px solid;
+}
+
+.ps-page .clock button#details:hover {
+    background-color: var(--whait);
+    color: var(--black);
+}
+
+.ps-page .clock button#resume-timer:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--mainColor);
+}
+
+.ps-page .clock button#stop-timer:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: rgb(233, 19, 19);
+}
+
+.ps-page .clock button#reset-timer:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+    .ps-page .clock {
+        padding: 25px 0;
+    }
+
+    .ps-page .clock #timer {
+        display: none;
+        padding: 25px 0;
+    }
+
+    .ps-page .clock #timer .clock-wrapper span.dots {
+        margin-top: -3px;
+    }
+}
+
+/* ==================
+5-Start Details Page*/
+
+/* ==================
+6-Start Drink Page*/
+
+/* ================== 
+7-Start End Shift */
+
+/* ================== 
+8-Start Add Page
+        8.1-Add PS
+        8.2-Add Drink */
