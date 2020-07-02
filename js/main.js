@@ -33,7 +33,7 @@ $(function () {
     // End Function Toggle Show PS & Drink
 
     // Start Function Popup Drink
-    $("#add-drink").click(function () {
+    $(".add-drink").click(function () {
         $(".parent-popup-drink").fadeIn();
         $(".popup-content-drink").css(
             "transform",
@@ -74,11 +74,8 @@ $(function () {
     // End Function Popup Drink
 
     // Start Function Popup Details
-    $("#details").click(function () {
-        console.log("test");
-    });
     // Show PopUp Fuinctios Drink
-    $("#details").click(function () {
+    $(".details").click(function () {
         $(".parent-popup-details").fadeIn();
         $(".popup-content-details").css(
             "transform",
@@ -117,4 +114,6 @@ $(function () {
         }
     });
     // End Function Popup Details
+
+    //
 });
