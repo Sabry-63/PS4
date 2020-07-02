@@ -276,7 +276,34 @@ a:hover {
 .ps-page .card:hover {
     box-shadow: 1px 1px 5px 1px var(--black);
 }
-
+.ps-page .card .icons-card {
+    position: relative;
+    display: inline-block;
+}
+.ps-page .card .icons-card .icon-ps {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid;
+    transition: color 0.4s, background-color 0.4s;
+}
+.ps-page .card:hover .icons-card .icon-ps {
+    background-color: var(--whait);
+    color: var(--mainColor);
+}
+.ps-page .card .card-title .num-ps {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 16px;
+}
 /* Timer */
 .ps-page button:hover {
     transition: all 0.5s ease;
@@ -296,6 +323,7 @@ a:hover {
     text-align: center;
     width: 100%;
     margin-top: 10px;
+    display: flex;
 }
 
 .ps-page .clock .input-wrapper button {
@@ -310,42 +338,42 @@ a:hover {
     color: var(--mainColor);
 }
 
-.ps-page .clock #timer {
+.ps-page .clock .timer {
     display: none;
 }
 
-.ps-page .clock #timer .clock-wrapper {
+.ps-page .clock .timer .clock-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.ps-page .clock #timer .clock-wrapper span {
+.ps-page .clock .timer .clock-wrapper span {
     font-weight: bold;
     transition: all 0.2s ease;
 }
 
-.ps-page .clock #timer .clock-wrapper span.red {
+.ps-page .clock .timer .clock-wrapper span.red {
     transition: all 0.2s ease;
     color: rgb(233, 19, 19);
     font-size: 1.3em;
 }
 
-.ps-page .clock #timer .clock-wrapper span.red.hours,
-.ps-page .clock #timer .clock-wrapper span.red.minutes,
-.ps-page .clock #timer .clock-wrapper span.red.dots {
+.ps-page .clock .timer .clock-wrapper span.red.hours,
+.ps-page .clock .timer .clock-wrapper span.red.minutes,
+.ps-page .clock .timer .clock-wrapper span.red.dots {
     width: 0;
     opacity: 0;
     transition: all 0.3s ease;
 }
 
-.ps-page .clock #timer .clock-wrapper span.dots {
+.ps-page .clock .timer .clock-wrapper span.dots {
     margin: -2px 5px 0;
 }
 
-.ps-page .clock button#stop-timer,
-.ps-page .clock button#add-drink,
-.ps-page .clock button#details,
-.ps-page .clock button#reset-timer {
+.ps-page .clock .stop-timer,
+.ps-page .clock .add-drink,
+.ps-page .clock .details,
+.ps-page .clock .reset-timer {
     margin: 5px;
     padding: 10px 15px;
     text-transform: uppercase;
@@ -354,29 +382,29 @@ a:hover {
     color: #fff;
 }
 
-.ps-page .clock button#details {
+.ps-page .clock .details {
     background-color: var(--black);
     border: 1px solid;
 }
 
-.ps-page .clock button#details:hover {
+.ps-page .clock .details:hover {
     background-color: var(--whait);
     color: var(--black);
 }
 
-.ps-page .clock button#resume-timer:focus {
+.ps-page .clock .resume-timer:focus {
     outline: none;
     box-shadow: none;
     border-color: var(--mainColor);
 }
 
-.ps-page .clock button#stop-timer:focus {
+.ps-page .clock .stop-timer:focus {
     outline: none;
     box-shadow: none;
     border-color: rgb(233, 19, 19);
 }
 
-.ps-page .clock button#reset-timer:focus {
+.ps-page .clock .reset-timer:focus {
     outline: none;
     box-shadow: none;
     border-color: #000;
@@ -387,12 +415,12 @@ a:hover {
         padding: 25px 0;
     }
 
-    .ps-page .clock #timer {
+    .ps-page .clock .timer {
         display: none;
         padding: 25px 0;
     }
 
-    .ps-page .clock #timer .clock-wrapper span.dots {
+    .ps-page .clock .timer .clock-wrapper span.dots {
         margin-top: -3px;
     }
 }
