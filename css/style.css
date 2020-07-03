@@ -20,7 +20,7 @@
 /*=========================
 1-Start Main Style */
 :root {
-    --mainColor: #a11827;
+    --mainColor: #094088;
     --black: #0f0b0b;
     --whait: #ffffff;
     --gray: #bdc3c7;
@@ -30,7 +30,7 @@ body {
     background-color: #f1f1f1;
     text-transform: capitalize;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-        url("../images/bg/bg-ps.jpg");
+        url("../images/bg/Plejak.jpg");
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
@@ -111,6 +111,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 
 .title-page {
@@ -126,7 +127,6 @@ a:hover {
     width: 100%;
     left: 0;
     bottom: -15px;
-    border-radius: 100%;
     background-color: var(--whait);
 }
 .title-page::after {
@@ -134,11 +134,14 @@ a:hover {
     position: absolute;
     height: 8px;
     width: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     bottom: -17px;
-    border-radius: 10px;
     background: var(--mainColor);
+    transition: width 0.4s, background 1s;
+}
+.title-page:hover::after {
+    width: 100%;
+    background: #fff;
 }
 /* Show Sections */
 #ps,
@@ -190,9 +193,8 @@ a:hover {
     bottom: 0;
     top: 0;
     left: 0;
-    box-shadow: 0px 0px 20px 1px var(--black);
-    z-index: 2;
-    background-color: var(--black);
+    box-shadow: 0px 0px 5px 1px #222;
+    z-index: 1;
 }
 
 .nav-bar .link-navbar:hover {
@@ -223,7 +225,7 @@ a:hover {
 3-End  Control page */
 .control-page .contet-control {
     background-color: #f1f1f1;
-    box-shadow: 1px 1px 10px 4px var(--black);
+    box-shadow: 1px 1px 3px 1px #999;
     border-radius: 4px;
 }
 .control-page .contet-control .box-contnet {
@@ -271,10 +273,7 @@ a:hover {
         4.2-Show Timer
         4.3-Aletr Timer Finshed  */
 .ps-page .card {
-    transition: box-shadow 0.4s;
-}
-.ps-page .card:hover {
-    box-shadow: 1px 1px 5px 1px var(--black);
+    box-shadow: 0px 0px 10px 1px #444;
 }
 .ps-page .card .icons-card {
     position: relative;
