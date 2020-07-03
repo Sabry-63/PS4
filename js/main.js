@@ -20,7 +20,7 @@ $(function () {
 
     // Start Function Toggle Show PS & Drink
     // Show Dirnk Add
-    $(".add-drink").click(function () {
+    $(".add-drink-form").click(function () {
         $(".add-drink-page").fadeIn();
         $(".add-ps-page").hide();
     });

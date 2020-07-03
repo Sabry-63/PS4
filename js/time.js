@@ -1,6 +1,9 @@
 $(document).ready(function () {
+    var id = 0;
     // Start Timer Function
     $(".start").click(function () {
+        let cuontUp = "interval" + id++,
+            conutDown = "interval" + id++;
         // Set Vars
         const s = $(this)
                 .parent(".input-wrapper")
@@ -17,13 +20,13 @@ $(document).ready(function () {
                 .siblings(".timer")
                 .children(".clock-wrapper")
                 .children(".hours"),
-            input = $(this).siblings(".num").val();
+            input = $(this).siblings(".num");
         let seconds = 1,
             minutes = 1,
             hours = 1;
 
         // Checked For Value Inpu
-        if (input == "") {
+        if (input.val() == "") {
             // Show Btns Actions
             $(this).parent().slideUp(350);
             $(this).parent().siblings().children(".reset-timer").hide(350);
@@ -37,7 +40,7 @@ $(document).ready(function () {
             }, 350);
 
             // Start Timer Up
-            cunoutUp = setInterval(() => {
+            cuontUp = setInterval(() => {
                 s.text() < 9
                     ? s.text("0" + seconds++)
                     : parseInt(s.text(seconds++));
@@ -73,15 +76,17 @@ $(document).ready(function () {
             }, 350);
 
             // Post Timer Down Form Input Value
-            let min = input,
+            let min = input.val(),
                 scen = 59;
             m.text(min-- <= 10 ? "0" + min-- : min--);
             s.text("59");
+
             // Start Timer Down
-            cunoutDown = setInterval(() => {
+            conutDown = setInterval(() => {
                 s.text() <= 10
                     ? s.text("0" + scen--)
                     : parseInt(s.text(scen--));
+                // Down Seconds
                 if (scen < 0) {
                     m.text() <= 10 > 1
                         ? m.text("0" + min--)
@@ -98,36 +103,46 @@ $(document).ready(function () {
                         .children(".reset-timer")
                         .fadeIn(350);
                     $(this).parent().siblings().children(".add-drink").hide();
-                    clearInterval(cunoutDown);
+                    clearInterval(conutDown);
                     setTimeout(() => {
-                        alert("PS Finshied");
+                        alert("PS Finshied" + id);
                     }, 1000);
                 }
             }, 1000);
         }
 
         // Start Reset Timer Function
-        $(".reset-timer").click(function () {
-            $(this).parent(".buttons-wrapper").hide();
-            $(this).parent(".buttons-wrapper").siblings(".timer").hide();
-            $(this)
-                .parent(".buttons-wrapper")
-                .siblings(".input-wrapper")
-                .slideDown();
-            s.text(0);
-            m.text(0);
-            h.text(0);
-            input = "0";
-        });
+        $(this)
+            .parent(".input-wrapper")
+            .siblings(".buttons-wrapper")
+            .children(".reset-timer")
+            .click(function () {
+                $(this).parent(".buttons-wrapper").hide();
+                $(this).parent(".buttons-wrapper").siblings(".timer").hide();
+                $(this)
+                    .parent(".buttons-wrapper")
+                    .siblings(".input-wrapper")
+                    .slideDown();
+                // Reset Value In Timer
+                s.text("00");
+                m.text("00");
+                h.text("00");
+                input.val("");
+            });
+
+        // Btn Stop Timer Function
+        $(this)
+            .parent(".input-wrapper")
+            .siblings(".buttons-wrapper")
+            .children(".stop-timer")
+            .click(function () {
+                clearInterval(cuontUp);
+                $(this).hide();
+                $(this).siblings(".add-drink").hide();
+                $(this).siblings(".reset-timer").fadeIn(350);
+            });
+
+        // End Stop Timer Function
     });
     // End Timer Function
-
-    // Btn Stop Timer Function
-    $(".stop-timer").click(function () {
-        clearInterval(cunoutUp);
-        $(this).hide();
-        $(this).siblings(".add-drink").hide();
-        $(this).siblings(".reset-timer").fadeIn(350);
-    });
-    // End Stop Timer Function
 });
