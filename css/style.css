@@ -206,6 +206,7 @@ a:hover {
     background-image: url("../images/load/0_751Ud018bngsi5ytmasxs5b_qv08bb.gif");
     z-index: 999;
     background-size: cover;
+    background-position: center center;
     position: fixed;
     top: 0;
     left: 0;
