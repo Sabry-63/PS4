@@ -178,6 +178,7 @@ a:hover {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
     display: none;
+    z-index: 3;
 }
 
 .parent-popup-drink .popup-content-drink,
@@ -200,6 +201,12 @@ a:hover {
     right: 10px;
     top: 10px;
 }
+@media (max-width: 767px) {
+    .parent-popup-drink .popup-content-drink,
+    .parent-popup-details .popup-content-details {
+        width: 80%;
+    }
+}
 
 /*=========================
 1-End Main Style */
@@ -210,7 +217,7 @@ a:hover {
     bottom: 0;
     top: 0;
     left: 0;
-    box-shadow: 0px 0px 5px 1px #222;
+    box-shadow: 0px 0px 5px 3px #000;
     z-index: 1;
 }
 
@@ -294,6 +301,21 @@ a:hover {
     display: none;
 }
 
+.control-page .add-drink-page form input,
+.control-page .add-drink-page form button,
+.control-page .add-ps-page form button,
+.control-page .add-ps-page form input {
+    width: 50%;
+}
+@media (max-width: 767px) {
+    .control-page .add-drink-page form input,
+    .control-page .add-ps-page form button,
+    .control-page .add-ps-page form input,
+    .control-page .add-ps-page form input {
+        width: 100%;
+    }
+}
+
 @keyframes up {
     form {
         transform: rotate(180deg);
@@ -311,10 +333,11 @@ a:hover {
         4.2-Show Timer
         4.3-Aletr Timer Finshed  */
 .ps-page .card {
-    box-shadow: 0px 0px 10px 1px #444;
+    box-shadow: 0px 0px 5px 0px #333;
+    background-color: rgba(57, 97, 171, 0.3);
+    color: var(--whait);
 }
 .ps-page .card .icons-card {
-    position: relative;
     display: inline-block;
 }
 .ps-page .card .icons-card .icon-ps {
@@ -323,23 +346,25 @@ a:hover {
     line-height: 60px;
     text-align: center;
     border-radius: 50%;
-    border: 1px solid;
-    transition: color 0.4s, background-color 0.4s;
+    transition: color 0.4s, background-color 0.4s, transform 0.4s;
 }
 .ps-page .card:hover .icons-card .icon-ps {
     background-color: var(--whait);
     color: var(--mainColor);
+    transform: scale(1.2);
 }
+
 .ps-page .card .card-title .num-ps {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+    top: -1px;
+    right: -1px;
+    width: 55px;
+    height: 50px;
+    line-height: 35px;
     text-align: center;
-    border-radius: 50%;
-    font-size: 16px;
+    font-size: 18px;
+    border-bottom-left-radius: 100%;
+    box-shadow: -5px 5px 10px 0 var(--black);
 }
 /* Timer */
 .ps-page button:hover {
@@ -364,15 +389,14 @@ a:hover {
 }
 
 .ps-page .clock .input-wrapper button {
-    background-color: var(--mainColor);
+    background-color: var(--whait);
     font-weight: bold;
-    color: var(--whait);
-    border: 1px solid;
+    color: var(--mainColor);
 }
 
 .ps-page .clock .input-wrapper button:hover {
-    background-color: var(--whait);
-    color: var(--mainColor);
+    background-color: var(--mainColor);
+    color: var(--whait);
 }
 
 .ps-page .clock .timer {
@@ -389,20 +413,6 @@ a:hover {
     transition: all 0.2s ease;
 }
 
-.ps-page .clock .timer .clock-wrapper span.red {
-    transition: all 0.2s ease;
-    color: rgb(233, 19, 19);
-    font-size: 1.3em;
-}
-
-.ps-page .clock .timer .clock-wrapper span.red.hours,
-.ps-page .clock .timer .clock-wrapper span.red.minutes,
-.ps-page .clock .timer .clock-wrapper span.red.dots {
-    width: 0;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
 .ps-page .clock .timer .clock-wrapper span.dots {
     margin: -2px 5px 0;
 }
@@ -412,21 +422,21 @@ a:hover {
 .ps-page .clock .details,
 .ps-page .clock .reset-timer {
     margin: 5px;
-    padding: 10px 15px;
     text-transform: uppercase;
     font-weight: bold;
     display: none;
     color: #fff;
+    padding: 10px 0;
 }
 
 .ps-page .clock .details {
-    background-color: var(--black);
-    border: 1px solid;
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
 }
 
 .ps-page .clock .details:hover {
     background-color: var(--whait);
-    color: var(--black);
+    color: var(--mainColor);
 }
 
 .ps-page .clock .resume-timer:focus {
@@ -448,15 +458,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .ps-page .clock {
-        padding: 25px 0;
-    }
-
-    .ps-page .clock .timer {
-        display: none;
-        padding: 25px 0;
-    }
-
     .ps-page .clock .timer .clock-wrapper span.dots {
         margin-top: -3px;
     }
@@ -470,6 +471,18 @@ a:hover {
 
 /* ================== 
 7-Start End Shift */
+
+.end-shift-page .box-end-shift {
+    width: 30%;
+}
+@media (max-width: 767px) {
+    .end-shift-page .box-end-shift {
+        width: 100%;
+    }
+    .end-shift-page .head-end-shift input {
+        width: 50%;
+    }
+}
 
 /* ================== 
 8-Start Add Page
