@@ -132,16 +132,33 @@ a:hover {
 .title-page::after {
     content: "";
     position: absolute;
-    height: 8px;
-    width: 30%;
+    height: 10px;
+    width: 30px;
     left: 0;
-    bottom: -17px;
+    bottom: -15px;
     background: var(--mainColor);
     transition: width 0.4s, background 1s;
+    animation: width 2s 0s linear infinite;
 }
-.title-page:hover::after {
-    width: 100%;
-    background: #fff;
+
+@keyframes width {
+    0% {
+        left: 0%;
+        opacity: 1;
+    }
+    25% {
+        left: 20%;
+    }
+    50% {
+        left: 40%;
+    }
+    75% {
+        left: 60%;
+    }
+    100% {
+        left: 80%;
+        opacity: 0;
+    }
 }
 /* Show Sections */
 #ps,
@@ -197,10 +214,12 @@ a:hover {
     z-index: 1;
 }
 
-.nav-bar .link-navbar:hover {
+.nav-bar .link-navbar:hover,
+.nav-bar .link-navbar.active {
     color: var(--whait);
 }
-.nav-bar .link-navbar:hover .icon-nav {
+.nav-bar .link-navbar:hover .icon-nav,
+.nav-bar .link-navbar.active .icon-nav {
     background-color: var(--mainColor);
     color: var(--whait);
 }
@@ -246,12 +265,13 @@ a:hover {
 .control-page .contet-control .box-contnet:hover .icon {
     color: var(--mainColor);
     background-color: var(--whait);
+    transform: scale(1.1);
 }
 .control-page .contet-control .box-contnet .title-icon::before {
     content: "+";
     position: absolute;
-    color: var(--whait);
-    background-color: var(--mainColor);
+    color: var(--mainColor);
+    background-color: var(--whait);
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -259,10 +279,28 @@ a:hover {
     text-align: center;
     right: 0;
     font-weight: bold;
+    transition: color 0.4s, background-color 0.4s;
+    z-index: 2;
 }
+
+.control-page .contet-control .box-contnet:hover .title-icon::before {
+    animation: up 1.5s 0s linear infinite;
+    background-color: var(--mainColor);
+    color: var(--whait);
+}
+
 .control-page .add-drink-page,
 .control-page .add-ps-page {
     display: none;
+}
+
+@keyframes up {
+    form {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 /* ==================
 3-Start Logins Page*/
