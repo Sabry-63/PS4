@@ -1,3 +1,8 @@
+// Window Loding
+window.onload = function () {
+    document.querySelector(".load-page").remove();
+};
+
 $(function () {
     // Set Padding Bottom In Body
     if ($("footer").hasClass("bottom")) {
