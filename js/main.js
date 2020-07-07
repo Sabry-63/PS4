@@ -9,6 +9,9 @@ $(function () {
     // Start Function Show Sections
     $(".link-navbar").click(function (e) {
         e.preventDefault();
+        $(this).addClass("active");
+        $(this).parent().siblings().children().removeClass("active");
+
         $(".block").hide();
         $($(this).data("targets"))
             .addClass("block")

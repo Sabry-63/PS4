@@ -32,6 +32,8 @@ $(document).ready(function () {
             $(this).parent().siblings().children(".reset-timer").hide(350);
             setTimeout(() => {
                 $(this).parent().siblings().fadeIn(350);
+                $(this).parent().siblings(".ps-chouse").hide();
+                $(this).parent().siblings(".checked-box").hide();
                 $(this)
                     .parent()
                     .siblings()
@@ -68,35 +70,51 @@ $(document).ready(function () {
             $(this).parent().slideUp(350);
             setTimeout(() => {
                 $(this).parent().siblings().fadeIn(350);
+                $(this).parent().siblings(".ps-chouse").hide();
+                $(this).parent().siblings(".checked-box").hide();
+
                 $(this)
                     .parent()
                     .siblings()
-                    .children(".details ,.add-drink")
+                    .children(".details ,.add-drink,.reset-timer")
                     .fadeIn(350);
             }, 350);
 
             // Post Timer Down Form Input Value
-            let min = input.val(),
+            let houre = 0,
+                min,
                 scen = 59;
-            m.text(min-- <= 10 ? "0" + min-- : min--);
-            s.text("59");
 
+            if (input.val() > 60) {
+                h.text(++houre <= 10 ? "0" + houre : houre);
+                min = input.val() - 60;
+                m.text(min-- <= 10 ? "0" + min-- : min--);
+            } else {
+                min = input.val();
+                m.text(min-- <= 10 ? "0" + min-- : min--);
+            }
             // Start Timer Down
             conutDown = setInterval(() => {
-                s.text() <= 10
-                    ? s.text("0" + scen--)
-                    : parseInt(s.text(scen--));
+                s.text(scen);
+                s.text() <= 9 ? s.text("0" + scen--) : parseInt(s.text(scen--));
+
+                if (min == -1 && scen < 0 && houre != 0) {
+                    h.text(--houre);
+                    min = 59;
+                }
                 // Down Seconds
                 if (scen < 0) {
-                    m.text() <= 10 > 1
+                    m.text() < 10 > 1
                         ? m.text("0" + min--)
                         : parseInt(m.text(min--));
                     scen = 59;
                 }
+
                 // Finshed Time
-                if (m.text() == -1 && s.text() == 0) {
+                if (m.text() == -1 && h.text() == 0 && s.text() == 0) {
                     s.text("00");
                     m.text("00");
+                    h.text("00");
                     $(this)
                         .parent()
                         .siblings()
@@ -118,16 +136,21 @@ $(document).ready(function () {
             .children(".reset-timer")
             .click(function () {
                 $(this).parent(".buttons-wrapper").hide();
+                $(this).hide();
                 $(this).parent(".buttons-wrapper").siblings(".timer").hide();
                 $(this)
                     .parent(".buttons-wrapper")
                     .siblings(".input-wrapper")
                     .slideDown();
+                $(this).parent().siblings(".ps-chouse").fadeIn(350);
+                $(this).parent().siblings(".checked-box").fadeIn(350);
                 // Reset Value In Timer
                 s.text("00");
                 m.text("00");
                 h.text("00");
                 input.val("");
+                clearInterval(cuontUp);
+                clearInterval(conutDown);
             });
 
         // Btn Stop Timer Function
