@@ -53,7 +53,7 @@
       <!-- ================================================
         Start control-page -->
       <section id="control" class="control-page py-5  block ">
-        <div class="container">
+        <div class="">
           <div class="text-center">
             <h2 class="title-page mb-5">
               Control
@@ -62,11 +62,13 @@
 
           <div class="contet-control p-5 d-flex justify-content-center  align-items-center">
             <button class="box-contnet mr-5 click-pull add-ps">
-              <span class="mainColor font-size title-icon">Add PS</span>
+              <span class="mainColor font-size title-icon d-none d-md-inline">Add PS</span>
+              <span class="mainColor font-size title-icon d-block d-md-none"></span>
               <i class="fas fa-tv font-size icon text-center ml-3"></i>
             </button>
             <button class="box-contnet click-pull add-drink-form">
-              <span class="mainColor font-size title-icon">Add Drink</span>
+              <span class="mainColor font-size title-icon  d-none d-md-inline">Add Drink</span>
+              <span class="mainColor font-size title-icon d-block d-md-none"></span>
               <i class="fas fa-beer font-size icon text-center ml-3"></i>
             </button>
           </div> <!-- ./contnet -->
@@ -74,47 +76,51 @@
           <!-- ================================================
                 Start Add Drink-Page -->
           <section class="add-drink-page py-5 ">
-            <div class="container">
+            <div class="">
               <div class="text-center">
                 <h2 class="title-page mb-5">
                   Add Drink
                 </h2>
               </div> <!-- title-page -->
               <form class="text-center w-100 mx-auto">
-                <input class="w-50  mb-3 p-2" type="text" placeholder="Name Drink">
-                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Price">
-                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Quantity">
-                <button class="w-25 d-block mx-auto  btn bg-color-add colorWhait">
+                <input class="  mb-3 p-2" type="text" placeholder="Name Drink">
+                <input class="  mb-3 p-2" type="number" min="1" placeholder="Price">
+                <input class="  mb-3 p-2" type="number" min="1" placeholder="Quantity">
+                <button class=" d-block mx-auto  btn bg-color-add colorWhait">
                   Add
                   <i class="fa fa-plus"></i>
                 </button>
               </form>
               <!-- End-Form -->
 
-              <!-- Main Table -->
-              <table class="table table-dark table-hover  mt-5">
-                <thead>
-                  <tr>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Drinks Name</th>
-                    <th scope="col">Drinks Price</th>
-                    <th scope="col">Drinks Count</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <i class="fas fa-edit click-pull color-add font-size "></i>
-                      <i class="fa fa-trash click-pull color-remove font-size mx-1"></i>
-                    </th>
-                    <td>test</td>
-                    <td>22</td>
-                    <td>2</td>
-                  </tr>
+              <div class="table-responsive">
+                <!-- Main Table -->
+                <table class="table table-dark table-hover w-75 mx-auto mt-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">Edit</th>
+                      <th scope="col">Drinks Name</th>
+                      <th scope="col">Drinks Price</th>
+                      <th scope="col">Drinks Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="d-flex">
+                        <i class="fas fa-edit click-pull color-add font-size "></i>
+                        <i class="fa fa-trash click-pull color-remove font-size mx-1"></i>
+                      </th>
+                      <td>test</td>
+                      <td>22</td>
+                      <td>2</td>
+                    </tr>
 
-                </tbody>
-              </table>
-              <!-- End Main Table -->
+                  </tbody>
+                </table>
+                <!-- End Main Table -->
+              </div>
+
+
             </div>
           </section>
           <!-- ================================================
@@ -123,50 +129,53 @@
           <!-- ================================================
                 Start Add PS-Page -->
           <section class="add-ps-page py-5 ">
-            <div class="container">
+            <div class="">
               <div class="text-center">
                 <h2 class="title-page mb-5">
                   Add PS
                 </h2>
               </div> <!-- title-page -->
               <form class="text-center w-100 mx-auto">
-                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Number PS">
-                <input class="w-50  mb-3 p-2" type="text" placeholder="Name PS">
-                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Price Single Hour">
-                <input class="w-50  mb-3 p-2" type="number" min="0" placeholder="Price Multi Hour">
-                <button class="w-25 d-block mx-auto  btn bg-color-add colorWhait">
+                <input class="  mb-3 p-2" type="number" min="1" placeholder="Number PS">
+                <input class="  mb-3 p-2" type="text" placeholder="Name PS">
+                <input class="  mb-3 p-2" type="number" min="1" placeholder="Price Single Hour">
+                <input class="  mb-3 p-2" type="number" min="1" placeholder="Price Multi Hour">
+                <button class=" d-block mx-auto  btn bg-color-add colorWhait">
                   Add
                   <i class="fa fa-plus"></i>
                 </button>
               </form>
               <!-- End-Form -->
 
-              <!-- Main Table -->
-              <table class="table table-dark table-hover  mt-5">
-                <thead>
-                  <tr>
-                    <th scope="col">Edit</th>
-                    <th scope="col">PS Number</th>
-                    <th scope="col">PS Name</th>
-                    <th scope="col">Price Single Hour</th>
-                    <th scope="col">Price Single Hour</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <i class="fas fa-edit click-pull color-add font-size "></i>
-                      <i class="fa fa-trash click-pull color-remove font-size mx-1"></i>
-                    </th>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>2</td>
-                    <td>4</td>
-                  </tr>
+              <div class="table-responsive">
+                <!-- Main Table -->
+                <table class="table table-dark table-hover w-75 mx-auto  mt-5">
+                  <thead>
+                    <tr>
+                      <th scope="col">Edit</th>
+                      <th scope="col">PS Number</th>
+                      <th scope="col">PS Name</th>
+                      <th scope="col">Price Single Hour</th>
+                      <th scope="col">Price Single Hour</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="d-flex">
+                        <i class="fas fa-edit click-pull color-add font-size "></i>
+                        <i class="fa fa-trash click-pull color-remove font-size mx-1"></i>
+                      </th>
+                      <td>1</td>
+                      <td>test</td>
+                      <td>2</td>
+                      <td>4</td>
+                    </tr>
 
-                </tbody>
-              </table>
-              <!-- End Main Table -->
+                  </tbody>
+                </table>
+                <!-- End Main Table -->
+              </div>
+
             </div>
           </section>
           <!-- ================================================
@@ -196,7 +205,6 @@
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
                     <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
-
                 </h5>
                 <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
 
@@ -204,7 +212,7 @@
                 <div class="clock">
                   <div class="row">
                     <div class="checked-box col-12">
-                      <div class="d-flex mb-2 justify-content-center align-items-center border p-2 ps-chouse w-100">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
                         <div class="d-flex justify-content-center align-items-center ml-2">
                           <label class="mb-0" for="sin-ps1">Single</label>
                           <input class="ml-2" type="checkbox" name="" id="sin-ps1">
@@ -216,7 +224,7 @@
                       </div>
                     </div>
                     <div class="col-md-12 input-wrapper">
-                      <input type="number" class="num form-control w-100" min="0" placeholder="Minutes">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
                       <button class="btn w-100 mt-3 start">
                         <i class="fa fa-clock"></i>
                       </button>
@@ -235,18 +243,19 @@
                     <!-- Show Timer -->
 
                     <div class="buttons-wrapper ">
-                      <button class="btn bg-color-remove w-50 stop-timer">
-                        End
-                      </button>
-                      <button class="btn bg-color-add w-50 add-drink">
+                      <button class=" bg-color-add w-50 add-drink">
                         <i class="fa fa-plus"></i>
                         <i class="fa fa-beer"></i>
                       </button>
-                      <button class="btn w-50 details">
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class="btn w-50 bg-color-add reset-timer">
+                      <button class=" w-100 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
                       </button>
                     </div>
                     <!-- Action Timer -->
@@ -257,12 +266,12 @@
             </div> <!-- ./col-lg-4 -->
 
             <!-- Start Card PS -->
-            <div class="col-lg-4 mb-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mb-4">
               <div class="card p-4 ">
                 <h5 class="card-title text-center">
                   <div class="icons-card">
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
-                    <span class="num-ps colorWhait bg-main-color">2</span>
+                    <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
 
                 </h5>
@@ -272,19 +281,19 @@
                 <div class="clock">
                   <div class="row">
                     <div class="checked-box col-12">
-                      <div class="d-flex mb-2 justify-content-center align-items-center border p-2 ps-chouse w-100">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
                         <div class="d-flex justify-content-center align-items-center ml-2">
-                          <label class="mb-0" for="sin-ps2">Single</label>
-                          <input class="ml-2" type="checkbox" name="" id="sin-ps2">
+                          <label class="mb-0" for="sin-ps1">Single</label>
+                          <input class="ml-2" type="checkbox" name="" id="sin-ps1">
                         </div>
                         <div class="d-flex justify-content-center align-items-center ml-2">
-                          <label class="mb-0" for="multi-ps2">multi</label>
-                          <input class="ml-2" type="checkbox" name="" id="multi-ps2">
+                          <label class="mb-0" for="multi-ps1">multi</label>
+                          <input class="ml-2" type="checkbox" name="" id="multi-ps1">
                         </div>
                       </div>
                     </div>
                     <div class="col-md-12 input-wrapper">
-                      <input type="number" class="num form-control w-100" min="0" placeholder="Minutes">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
                       <button class="btn w-100 mt-3 start">
                         <i class="fa fa-clock"></i>
                       </button>
@@ -303,18 +312,19 @@
                     <!-- Show Timer -->
 
                     <div class="buttons-wrapper ">
-                      <button class="btn bg-color-remove w-50 stop-timer">
-                        End
-                      </button>
-                      <button class="btn bg-color-add w-50 add-drink">
+                      <button class=" bg-color-add w-50 add-drink">
                         <i class="fa fa-plus"></i>
                         <i class="fa fa-beer"></i>
                       </button>
-                      <button class="btn w-50 details">
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class="btn w-50 bg-color-add reset-timer">
+                      <button class=" w-100 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
                       </button>
                     </div>
                     <!-- Action Timer -->
@@ -325,12 +335,12 @@
             </div> <!-- ./col-lg-4 -->
 
             <!-- Start Card PS -->
-            <div class="col-lg-4 mb-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mb-4">
               <div class="card p-4 ">
                 <h5 class="card-title text-center">
                   <div class="icons-card">
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
-                    <span class="num-ps colorWhait bg-main-color">3</span>
+                    <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
 
                 </h5>
@@ -340,19 +350,19 @@
                 <div class="clock">
                   <div class="row">
                     <div class="checked-box col-12">
-                      <div class="d-flex mb-2 justify-content-center align-items-center border p-2 ps-chouse w-100">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
                         <div class="d-flex justify-content-center align-items-center ml-2">
-                          <label class="mb-0" for="sin-ps3">Single</label>
-                          <input class="ml-2" type="checkbox" name="" id="sin-ps3">
+                          <label class="mb-0" for="sin-ps1">Single</label>
+                          <input class="ml-2" type="checkbox" name="" id="sin-ps1">
                         </div>
                         <div class="d-flex justify-content-center align-items-center ml-2">
-                          <label class="mb-0" for="multi-ps3">multi</label>
-                          <input class="ml-2" type="checkbox" name="" id="multi-ps3">
+                          <label class="mb-0" for="multi-ps1">multi</label>
+                          <input class="ml-2" type="checkbox" name="" id="multi-ps1">
                         </div>
                       </div>
                     </div>
                     <div class="col-md-12 input-wrapper">
-                      <input type="number" class="num form-control w-100" min="0" placeholder="Minutes">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
                       <button class="btn w-100 mt-3 start">
                         <i class="fa fa-clock"></i>
                       </button>
@@ -371,18 +381,19 @@
                     <!-- Show Timer -->
 
                     <div class="buttons-wrapper ">
-                      <button class="btn bg-color-remove w-50 stop-timer">
-                        End
-                      </button>
-                      <button class="btn bg-color-add w-50 add-drink">
+                      <button class=" bg-color-add w-50 add-drink">
                         <i class="fa fa-plus"></i>
                         <i class="fa fa-beer"></i>
                       </button>
-                      <button class="btn w-50 details">
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class="btn w-50 bg-color-add reset-timer">
+                      <button class=" w-100 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
                       </button>
                     </div>
                     <!-- Action Timer -->
@@ -391,14 +402,15 @@
                 </div> <!-- ./Timer -->
               </div> <!-- ./card -->
             </div> <!-- ./col-lg-4 -->
+
 
             <!-- Start Card PS -->
-            <div class="col-lg-4 mb-4 col-md-6">
+            <div class="col-lg-4 col-md-6 mb-4">
               <div class="card p-4 ">
                 <h5 class="card-title text-center">
                   <div class="icons-card">
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
-                    <span class="num-ps colorWhait bg-main-color">4</span>
+                    <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
 
                 </h5>
@@ -408,19 +420,19 @@
                 <div class="clock">
                   <div class="row">
                     <div class="checked-box col-12">
-                      <div class="d-flex mb-2 justify-content-center align-items-center border p-2 ps-chouse w-100">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
                         <div class="d-flex justify-content-center align-items-center ml-2">
-                          <label class="mb-0" for="sin-ps4">Single</label>
-                          <input class="ml-2" type="checkbox" name="" id="sin-ps4">
+                          <label class="mb-0" for="sin-ps1">Single</label>
+                          <input class="ml-2" type="checkbox" name="" id="sin-ps1">
                         </div>
                         <div class="d-flex justify-content-center align-items-center ml-2">
-                          <label class="mb-0" for="multi-ps4">multi</label>
-                          <input class="ml-2" type="checkbox" name="" id="multi-ps4">
+                          <label class="mb-0" for="multi-ps1">multi</label>
+                          <input class="ml-2" type="checkbox" name="" id="multi-ps1">
                         </div>
                       </div>
                     </div>
                     <div class="col-md-12 input-wrapper">
-                      <input type="number" class="num form-control w-100" min="0" placeholder="Minutes">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
                       <button class="btn w-100 mt-3 start">
                         <i class="fa fa-clock"></i>
                       </button>
@@ -439,18 +451,19 @@
                     <!-- Show Timer -->
 
                     <div class="buttons-wrapper ">
-                      <button class="btn bg-color-remove w-50 stop-timer">
-                        End
-                      </button>
-                      <button class="btn bg-color-add w-50 add-drink">
+                      <button class=" bg-color-add w-50 add-drink">
                         <i class="fa fa-plus"></i>
                         <i class="fa fa-beer"></i>
                       </button>
-                      <button class="btn w-50 details">
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class="btn w-50 bg-color-add reset-timer">
+                      <button class=" w-100 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
                       </button>
                     </div>
                     <!-- Action Timer -->
@@ -459,9 +472,10 @@
                 </div> <!-- ./Timer -->
               </div> <!-- ./card -->
             </div> <!-- ./col-lg-4 -->
+
 
           </div> <!-- ./row -->
-        </div> <!-- ./container -->
+        </div> <!-- ./ -->
       </section>
       <!-- ================================================
           End Playstation-page -->
@@ -469,46 +483,53 @@
       <!-- ================================================
         Start Shift-page -->
       <section id="shift" class="end-shift-page py-5 ">
-        <div class="container">
+        <div class="">
           <div class="text-center">
             <h2 class="title-page mb-5">
               End Shift
             </h2> <!-- ./title-page -->
           </div>
           <form>
-            <div class="d-flex justify-content-center">
-              <input class="w-25 p-2 mr-2" type="text" placeholder="Total Shift" disabled readonly>
+            <div class="d-flex justify-content-center head-end-shift">
+              <input class=" p-2 mr-2" type="text" placeholder="Total Shift" disabled readonly>
               <button class="btn bg-color-remove colorWhait px-4">
                 <i class="fas fa-sign-out-alt    "></i>
                 End
               </button>
             </div>
-            <div class="text-center">
-              <label class="colorWhait font-size mr-2" for="form">From</label>
-              <input id="from" class="w-25 mt-3 p-2" type="date">
-              <label class="colorWhait font-size mx-2" for="to">To</label>
-              <input id="to" class="w-25 mt-3 p-2" type="date">
+            <div class="d-block d-md-flex justify-content-center">
+              <div class="box-end-shift">
+                <label class="colorWhait font-size mr-2" for="form">From</label>
+                <input id="from" class="w-75 mt-3 p-2" type="date">
+              </div>
+              <div class="box-end-shift">
+                <label class="colorWhait font-size mx-2" for="to">To</label>
+                <input id="to" class="w-75 mt-3 p-2" type="date">
+              </div>
             </div>
           </form>
-          <!-- Main Table -->
-          <table class="table table-dark table-hover  mt-5">
-            <thead>
-              <tr>
-                <th scope="col">PS Name</th>
-                <th scope="col">Cash Date </th>
-                <th scope="col">Total Cash </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">test</th>
-                <td>22</td>
-                <td>22</td>
-              </tr>
 
-            </tbody>
-          </table>
-          <!-- End Main Table -->
+          <div class="table-responsive">
+            <!-- Main Table -->
+            <table class="table table-dark table-hover w-75 mx-auto  mt-5">
+              <thead>
+                <tr>
+                  <th scope="col">PS Name</th>
+                  <th scope="col">Cash Date </th>
+                  <th scope="col">Total Cash </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">test</th>
+                  <td>22</td>
+                  <td>22</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- End Main Table -->
+          </div>
+
         </div>
       </section>
       <!-- ================================================
