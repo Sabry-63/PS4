@@ -270,6 +270,7 @@ a:hover {
     position: relative;
     border: none;
     outline: none;
+    background-color: transparent;
 }
 .control-page .contet-control .box-contnet .icon {
     color: var(--whait);
