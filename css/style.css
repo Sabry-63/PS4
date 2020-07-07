@@ -201,6 +201,17 @@ a:hover {
     right: 10px;
     top: 10px;
 }
+/* Load */
+.load-page {
+    background-image: url("../images/load/0_751Ud018bngsi5ytmasxs5b_qv08bb.gif");
+    z-index: 999;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 @media (max-width: 767px) {
     .parent-popup-drink .popup-content-drink,
     .parent-popup-details .popup-content-details {
@@ -430,13 +441,14 @@ a:hover {
 }
 
 .ps-page .clock .details {
-    background-color: var(--mainColor);
-    border: 1px solid var(--mainColor);
+    background-color: var(--whait);
+    border: 1px solid var(--whait);
+    color: var(--mainColor);
 }
 
 .ps-page .clock .details:hover {
-    background-color: var(--whait);
-    color: var(--mainColor);
+    background-color: var(--mainColor);
+    color: var(--whait);
 }
 
 .ps-page .clock .resume-timer:focus {
@@ -473,11 +485,16 @@ a:hover {
 7-Start End Shift */
 
 .end-shift-page .box-end-shift {
-    width: 30%;
+    width: 40%;
 }
 @media (max-width: 767px) {
     .end-shift-page .box-end-shift {
         width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .end-shift-page .box-end-shift label {
+        margin-top: 20px;
     }
     .end-shift-page .head-end-shift input {
         width: 50%;
