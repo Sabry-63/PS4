@@ -16,6 +16,12 @@
 <body>
 
   <!-- ================================================
+    Start Load  -->
+  <div class="load-page"></div>
+  <!-- ================================================
+    End Load  -->
+
+  <!-- ================================================
     Start Header  -->
   <header class="header">
     <!-- Start Navbar -->
@@ -53,7 +59,7 @@
       <!-- ================================================
         Start control-page -->
       <section id="control" class="control-page py-5  block ">
-        <div class="">
+        <div class="container">
           <div class="text-center">
             <h2 class="title-page mb-5">
               Control
@@ -251,7 +257,7 @@
                         <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class=" w-100 bg-color-add reset-timer">
+                      <button class=" w-50 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
                       </button>
                       <button class=" bg-color-remove w-50 stop-timer">
@@ -265,6 +271,7 @@
               </div> <!-- ./card -->
             </div> <!-- ./col-lg-4 -->
 
+
             <!-- Start Card PS -->
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card p-4 ">
@@ -273,7 +280,6 @@
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
                     <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
-
                 </h5>
                 <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
 
@@ -320,7 +326,7 @@
                         <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class=" w-100 bg-color-add reset-timer">
+                      <button class=" w-50 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
                       </button>
                       <button class=" bg-color-remove w-50 stop-timer">
@@ -342,7 +348,6 @@
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
                     <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
-
                 </h5>
                 <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
 
@@ -389,7 +394,7 @@
                         <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class=" w-100 bg-color-add reset-timer">
+                      <button class=" w-50 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
                       </button>
                       <button class=" bg-color-remove w-50 stop-timer">
@@ -403,7 +408,6 @@
               </div> <!-- ./card -->
             </div> <!-- ./col-lg-4 -->
 
-
             <!-- Start Card PS -->
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card p-4 ">
@@ -412,7 +416,6 @@
                     <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
                     <span class="num-ps colorWhait bg-main-color">1</span>
                   </div>
-
                 </h5>
                 <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
 
@@ -459,7 +462,211 @@
                         <i class="fa fa-list-alt" aria-hidden="true"></i>
                         details
                       </button>
-                      <button class=" w-100 bg-color-add reset-timer">
+                      <button class=" w-50 bg-color-add reset-timer">
+                        <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
+                      </button>
+                    </div>
+                    <!-- Action Timer -->
+
+                  </div>
+                </div> <!-- ./Timer -->
+              </div> <!-- ./card -->
+            </div> <!-- ./col-lg-4 -->
+
+            <!-- Start Card PS -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card p-4 ">
+                <h5 class="card-title text-center">
+                  <div class="icons-card">
+                    <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
+                    <span class="num-ps colorWhait bg-main-color">1</span>
+                  </div>
+                </h5>
+                <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
+
+                <!-- Start Timer -->
+                <div class="clock">
+                  <div class="row">
+                    <div class="checked-box col-12">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
+                        <div class="d-flex justify-content-center align-items-center ml-2">
+                          <label class="mb-0" for="sin-ps1">Single</label>
+                          <input class="ml-2" type="checkbox" name="" id="sin-ps1">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ml-2">
+                          <label class="mb-0" for="multi-ps1">multi</label>
+                          <input class="ml-2" type="checkbox" name="" id="multi-ps1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 input-wrapper">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
+                      <button class="btn w-100 mt-3 start">
+                        <i class="fa fa-clock"></i>
+                      </button>
+                    </div>
+                    <!-- ./Start Timer -->
+
+                    <div class="col-12 timer">
+                      <div class="clock-wrapper font-size">
+                        <span class="hours">00</span>
+                        <span class="dots">:</span>
+                        <span class="minutes">00</span>
+                        <span class="dots">:</span>
+                        <span class="seconds">00</span>
+                      </div>
+                    </div>
+                    <!-- Show Timer -->
+
+                    <div class="buttons-wrapper ">
+                      <button class=" bg-color-add w-50 add-drink">
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-beer"></i>
+                      </button>
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        details
+                      </button>
+                      <button class=" w-50 bg-color-add reset-timer">
+                        <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
+                      </button>
+                    </div>
+                    <!-- Action Timer -->
+
+                  </div>
+                </div> <!-- ./Timer -->
+              </div> <!-- ./card -->
+            </div> <!-- ./col-lg-4 -->
+
+            <!-- Start Card PS -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card p-4 ">
+                <h5 class="card-title text-center">
+                  <div class="icons-card">
+                    <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
+                    <span class="num-ps colorWhait bg-main-color">1</span>
+                  </div>
+                </h5>
+                <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
+
+                <!-- Start Timer -->
+                <div class="clock">
+                  <div class="row">
+                    <div class="checked-box col-12">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
+                        <div class="d-flex justify-content-center align-items-center ml-2">
+                          <label class="mb-0" for="sin-ps1">Single</label>
+                          <input class="ml-2" type="checkbox" name="" id="sin-ps1">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ml-2">
+                          <label class="mb-0" for="multi-ps1">multi</label>
+                          <input class="ml-2" type="checkbox" name="" id="multi-ps1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 input-wrapper">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
+                      <button class="btn w-100 mt-3 start">
+                        <i class="fa fa-clock"></i>
+                      </button>
+                    </div>
+                    <!-- ./Start Timer -->
+
+                    <div class="col-12 timer">
+                      <div class="clock-wrapper font-size">
+                        <span class="hours">00</span>
+                        <span class="dots">:</span>
+                        <span class="minutes">00</span>
+                        <span class="dots">:</span>
+                        <span class="seconds">00</span>
+                      </div>
+                    </div>
+                    <!-- Show Timer -->
+
+                    <div class="buttons-wrapper ">
+                      <button class=" bg-color-add w-50 add-drink">
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-beer"></i>
+                      </button>
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        details
+                      </button>
+                      <button class=" w-50 bg-color-add reset-timer">
+                        <i class="fas fa-redo-alt    "></i>
+                      </button>
+                      <button class=" bg-color-remove w-50 stop-timer">
+                        End
+                      </button>
+                    </div>
+                    <!-- Action Timer -->
+
+                  </div>
+                </div> <!-- ./Timer -->
+              </div> <!-- ./card -->
+            </div> <!-- ./col-lg-4 -->
+
+            <!-- Start Card PS -->
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card p-4 ">
+                <h5 class="card-title text-center">
+                  <div class="icons-card">
+                    <i class="fas fa-tv colorWhait bg-main-color font-size icon-ps"></i>
+                    <span class="num-ps colorWhait bg-main-color">1</span>
+                  </div>
+                </h5>
+                <img class=" card-img-top w-100 " height=" 150px" src="images/ps4/2.png" alt="Card image cap">
+
+                <!-- Start Timer -->
+                <div class="clock">
+                  <div class="row">
+                    <div class="checked-box col-12">
+                      <div class="d-flex mb-2 justify-content-center align-items-center  p-2 ps-chouse w-100">
+                        <div class="d-flex justify-content-center align-items-center ml-2">
+                          <label class="mb-0" for="sin-ps1">Single</label>
+                          <input class="ml-2" type="checkbox" name="" id="sin-ps1">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ml-2">
+                          <label class="mb-0" for="multi-ps1">multi</label>
+                          <input class="ml-2" type="checkbox" name="" id="multi-ps1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 input-wrapper">
+                      <input type="number" class="num form-control w-100" min="1" placeholder="Minutes">
+                      <button class="btn w-100 mt-3 start">
+                        <i class="fa fa-clock"></i>
+                      </button>
+                    </div>
+                    <!-- ./Start Timer -->
+
+                    <div class="col-12 timer">
+                      <div class="clock-wrapper font-size">
+                        <span class="hours">00</span>
+                        <span class="dots">:</span>
+                        <span class="minutes">00</span>
+                        <span class="dots">:</span>
+                        <span class="seconds">00</span>
+                      </div>
+                    </div>
+                    <!-- Show Timer -->
+
+                    <div class="buttons-wrapper ">
+                      <button class=" bg-color-add w-50 add-drink">
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-beer"></i>
+                      </button>
+                      <button class=" w-100 details">
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        details
+                      </button>
+                      <button class=" w-50 bg-color-add reset-timer">
                         <i class="fas fa-redo-alt    "></i>
                       </button>
                       <button class=" bg-color-remove w-50 stop-timer">
@@ -483,7 +690,7 @@
       <!-- ================================================
         Start Shift-page -->
       <section id="shift" class="end-shift-page py-5 ">
-        <div class="">
+        <div class="container">
           <div class="text-center">
             <h2 class="title-page mb-5">
               End Shift
