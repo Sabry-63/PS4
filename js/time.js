@@ -66,67 +66,77 @@ $(document).ready(function () {
                 }
             }, 1000);
         } else {
-            // Show Btns Actions
-            $(this).parent().slideUp(350);
-            setTimeout(() => {
-                $(this).parent().siblings().fadeIn(350);
-                $(this).parent().siblings(".ps-chouse").hide();
-                $(this).parent().siblings(".checked-box").hide();
-
-                $(this)
-                    .parent()
-                    .siblings()
-                    .children(".details ,.add-drink,.reset-timer")
-                    .fadeIn(350);
-            }, 350);
-
-            // Post Timer Down Form Input Value
-            let houre = 0,
-                min,
-                scen = 59;
-
-            if (input.val() > 60) {
-                h.text(++houre <= 10 ? "0" + houre : houre);
-                min = input.val() - 60;
-                m.text(min-- <= 10 ? "0" + min-- : min--);
+            if (Math.round(input.val()) < 1) {
+                alert("Your Can`t Add This Value");
             } else {
-                min = input.val();
-                m.text(min-- <= 10 ? "0" + min-- : min--);
-            }
-            // Start Timer Down
-            conutDown = setInterval(() => {
-                s.text(scen);
-                s.text() <= 9 ? s.text("0" + scen--) : parseInt(s.text(scen--));
+                // Show Btns Actions
+                $(this).parent().slideUp(350);
+                setTimeout(() => {
+                    $(this).parent().siblings().fadeIn(350);
+                    $(this).parent().siblings(".ps-chouse").hide();
+                    $(this).parent().siblings(".checked-box").hide();
 
-                if (min == -1 && scen < 0 && houre != 0) {
-                    h.text(--houre);
-                    min = 59;
-                }
-                // Down Seconds
-                if (scen < 0) {
-                    m.text() < 10 > 1
-                        ? m.text("0" + min--)
-                        : parseInt(m.text(min--));
-                    scen = 59;
-                }
-
-                // Finshed Time
-                if (m.text() == -1 && h.text() == 0 && s.text() == 0) {
-                    s.text("00");
-                    m.text("00");
-                    h.text("00");
                     $(this)
                         .parent()
                         .siblings()
-                        .children(".reset-timer")
+                        .children(".details ,.add-drink,.reset-timer")
                         .fadeIn(350);
-                    $(this).parent().siblings().children(".add-drink").hide();
-                    clearInterval(conutDown);
-                    setTimeout(() => {
-                        alert("PS Finshied" + id);
-                    }, 1000);
+                }, 350);
+
+                // Post Timer Down Form Input Value
+                let houre = 0,
+                    min,
+                    scen = 59;
+
+                if (input.val() > 60) {
+                    h.text(++houre <= 10 ? "0" + houre : houre);
+                    min = input.val() - 60;
+                    m.text(min-- <= 10 ? "0" + min-- : min--);
+                } else {
+                    min = Math.round(input.val());
+                    m.text(min-- <= 10 ? "0" + min-- : min--);
                 }
-            }, 1000);
+                // Start Timer Down
+                conutDown = setInterval(() => {
+                    s.text(scen);
+                    s.text() <= 9
+                        ? s.text("0" + scen--)
+                        : parseInt(s.text(scen--));
+
+                    if (min == -1 && scen < 0 && houre != 0) {
+                        h.text(--houre);
+                        min = 59;
+                    }
+                    // Down Seconds
+                    if (scen < 0) {
+                        m.text() < 10 > 1
+                            ? m.text("0" + min--)
+                            : parseInt(m.text(min--));
+                        scen = 59;
+                    }
+
+                    // Finshed Time
+                    if (m.text() == -1 && h.text() == 0 && s.text() == 0) {
+                        s.text("00");
+                        m.text("00");
+                        h.text("00");
+                        $(this)
+                            .parent()
+                            .siblings()
+                            .children(".reset-timer")
+                            .fadeIn(350);
+                        $(this)
+                            .parent()
+                            .siblings()
+                            .children(".add-drink")
+                            .hide();
+                        clearInterval(conutDown);
+                        setTimeout(() => {
+                            alert("PS Finshied" + id);
+                        }, 1000);
+                    }
+                }, 1000);
+            }
         }
 
         // Start Reset Timer Function
@@ -168,4 +178,18 @@ $(document).ready(function () {
         // End Stop Timer Function
     });
     // End Timer Function
+
+    // Checked For Box
+    $(".checked-box input").click(function () {
+        $(this).addClass("checked");
+
+        if ($(this).hasClass("checked")) {
+            $(this)
+                .parent()
+                .parent(".checked-box")
+                .siblings(".input-wrapper")
+                .children("button")
+                .removeClass("no-clicked");
+        }
+    });
 });
