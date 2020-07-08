@@ -75,6 +75,10 @@ a:hover {
     cursor: pointer;
 }
 
+.no-clicked {
+    pointer-events: none;
+}
+
 .btn-min:hover {
     color: var(--mainColor);
     background-color: transparent;
