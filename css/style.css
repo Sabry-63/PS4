@@ -77,6 +77,7 @@ a:hover {
 
 .no-clicked {
     pointer-events: none;
+    opacity: 0.5;
 }
 
 .btn-min:hover {
@@ -409,6 +410,7 @@ a:hover {
     background-color: var(--whait);
     font-weight: bold;
     color: var(--mainColor);
+    transition: opacity 0.4s;
 }
 
 .ps-page .clock .input-wrapper button:hover {
